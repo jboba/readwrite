@@ -1,24 +1,44 @@
 <!doctype html>
 <html lang="en" ng-app="application">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation for Apps</title>
     <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="./assets/js/foundation.js"></script>
     <script src="./assets/js/templates.js"></script>
     <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/Ctrl.js"></script>
     <script src="./assets/js/app.js"></script>
-  </head>
-  <body>
-    <div class="grid-frame vertical">
-      <div class="grid-content shrink" style="padding: 0;">
-        <ul class="primary condense menu-bar">
-          <li><a><strong>Foundation for Apps</strong></a></li>
-        </ul>
-      </div>
-      <div ui-view class="grid-content">
-      </div>
+</head>
+
+<body>
+    <div class="grid-block vertical">
+        <div class="grid-content shrink header-pad" ng-controller="SocialAppCtrl">
+            <header>
+                <section class="top-header">
+                    <ul class="social-icon">
+                        <li class="dark" ng-repeat="item in socialMenu">
+                            <a href=""><i class="material-icons">{{item.nameIcon}}</i></a>
+                        </li>
+                    </ul>
+                    <ul class="callbackLinks">
+                        <li ng-repeat="link in callback">
+                            <a href="{{link.link}}"><span>{{link.name}}</span></a>
+                        </li>
+                    </ul>
+                    <div class="logo grid-container">readwrite</div>
+                </section>
+                <nav class="grid-container">
+                ffdfdS
+                </nav>
+            </header>
+        </div>
+        <div ui-view class="grid-content">
+        </div>
     </div>
-  </body>
+</body>
+
 </html>

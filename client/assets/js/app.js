@@ -1,7 +1,7 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular.module('application', [
+    angular.module('application', [
     'ui.router',
     'ngAnimate',
 
@@ -10,25 +10,40 @@
     'foundation.dynamicRouting',
     'foundation.dynamicRouting.animations'
   ])
-    .config(config)
-    .run(run)
-  ;
+        .config(config)
+        .run(run)
+        .controller('SocialAppCtrl', SocialAppCtrl);
 
-  config.$inject = ['$urlRouterProvider', '$locationProvider'];
+    config.$inject = ['$urlRouterProvider', '$locationProvider'];
 
-  function config($urlProvider, $locationProvider) {
-    $urlProvider.otherwise('/');
+    function config($urlProvider, $locationProvider) {
+        $urlProvider.otherwise('/home');
 
-    $locationProvider.html5Mode({
-      enabled:false,
-      requireBase: false
-    });
+        $locationProvider.html5Mode({
+            enabled: false,
+            requireBase: false
+        });
 
-    $locationProvider.hashPrefix('!');
-  }
+        $locationProvider.hashPrefix('!');
+    }
 
-  function run() {
-    FastClick.attach(document.body);
-  }
+    function run() {
+        FastClick.attach(document.body);
+    }
 
+    //SocialAppCtrl
+    function SocialAppCtrl($scope){
+        $scope.socialMenu=[
+            {'nameIcon': 'grade'},
+            {'nameIcon': 'done'},
+            {'nameIcon': 'zoom_in'},
+            {'nameIcon': 'visibility'}
+        ];
+        $scope.callback=[
+            {'link':'vk.com',
+             'name':'Вконтакте'},
+            {'link':'twitter.com',
+             'name':'Твиттер'}
+        ];
+    }
 })();
