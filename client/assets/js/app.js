@@ -45,5 +45,17 @@
             {'link':'twitter.com',
              'name':'Твиттер'}
         ];
+        $scope.navList=[
+            {'item':'Code',
+             'link':'code'},
+            {'item':'Build',
+            'link':'build'},
+            {'item':'Structure',
+            'link':'structure'},
+            {'item':'Connect',
+            'link':'connect'},
+            {'item':'Lead',
+            'link':'lead'}
+        ]
     }
 })();

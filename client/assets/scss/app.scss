@@ -1,42 +1,52 @@
 @import "settings";
 @import "foundation";
 $background:#F4F6F8;
-.header-pad{
+ul,li{
+    margin-left:0;
     padding: 0;
-    overflow:hidden;
-
+    display: inline;
 }
-.top-header{
-     overflow:hidden;
-     padding: 0;
-     margin-top: 10px;
-    
+.header{
+     margin:20px;
      li{
              display: inline;
              a{
                  color:gray;
              }
          }
-     .social-icon{
-         float: left;
-         margin-left: 20px;
-         color:antiquewhite;
-     }
      .callbackLinks{
-         float:right;
-         height: 30px;
-         margin-right: 20px;
          font-size: 15px;
+
      }
     .logo{
-        display: block;
-        height:auto;
-        width: 1000px; 
-        margin-top: 30px;
-        font-size: 65px;
-        text-transform:lowercase;
-        font-weight: 800;
-        color:rgba(203, 55, 51, 1);
-        vertical-align: middle;
+        h1{
+            margin-top: 30px;
+            padding-left: 0;
+            font-size: 65px;
+            text-transform:lowercase;
+            font-weight: bold;
+            color:rgba(203, 55, 51, 1);
+            height: auto;
+            overflow:hidden;
+        }
     }
+    .nav{
+        width: 100%;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20px;
+        li{
+            padding: 0 20px;
+            padding-left: 0;
+        }
+    }
+
+}
+.full-width{
+    margin: 0 auto;
+    width: 940px
+}
+.toggle-btn{
+    padding:2.5px 0;
+    margin-right: 1px;
 }
